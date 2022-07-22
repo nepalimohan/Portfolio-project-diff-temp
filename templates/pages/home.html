@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
 	<title>Dennis Ivy</title>
@@ -10,7 +11,7 @@
 
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="default.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
 	<link id="theme-style" rel="stylesheet" type="text/css" href="">
 </head>
 <body>
@@ -26,7 +27,7 @@
 				<div class="nav-wrapper">
 
 					<!-- Link around dots-wrapper added after tutorial video -->
-					<a href="index.html">
+					<a href="{% static 'home' %}">
 						<div class="dots-wrapper">
 							<div id="dot-1" class="browser-dot"></div>
 							<div id="dot-2" class="browser-dot"></div>
@@ -113,7 +114,7 @@
 
 				
 				<div class="social-links">
-					<img id="social_img" src="images/follow.jpg">
+					<img id="social_img" src="{% static 'images/follow.jpg' %}">
 					<h3>Find me on Twitter & Youtube</h3>
 
 					<a target="_blank" href="https://www.youtube.com/c/dennisivy">YouTube: @DennisIvy</a>
@@ -193,6 +194,6 @@
 		</div>
 	</section> 
 
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
