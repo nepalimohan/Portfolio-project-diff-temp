@@ -19,13 +19,15 @@ class Detail(models.Model):
     about = RichTextField()
     facebook_link = models.URLField(max_length=100)
     github_link = models.URLField(max_length=100)
-    
+    photo = models.ImageField(upload_to='photo/%Y/%m/%d/', blank=True)
+
     def __str__(self):
         return self.name
     
-class PastProject(models.Model):
+class Project(models.Model):
     name = models.CharField(max_length=100)
     github_link = models.URLField(max_length=100)
+    photo1 = models.ImageField(upload_to='photo/%Y/%m/%d/', blank=True)
     
     def __str__(self):
         return self.name
