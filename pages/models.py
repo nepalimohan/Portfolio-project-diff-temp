@@ -27,6 +27,7 @@ class Detail(models.Model):
 class Project(models.Model):
     name = models.CharField(max_length=100)
     github_link = models.URLField(max_length=100)
+    description = RichTextField(blank=True)
     photo1 = models.ImageField(upload_to='photo/%Y/%m/%d/', blank=True)
     
     def __str__(self):
